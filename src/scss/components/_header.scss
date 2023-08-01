@@ -1,0 +1,92 @@
+.header {
+  padding-top: 55px;
+  background-color: var(--bg-gray);
+
+  @include mobile {
+    padding-top: 20px;
+  }
+
+  &__container {
+    @include flex-all-sb;
+
+    @include mobile {
+      flex-direction: row-reverse
+    }
+  }
+
+  &__nav {
+    @include flex-all-sb;
+
+    width: 65%;
+    gap: var(--gap);
+
+    @include tablet {
+      @include flex-column-start;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      justify-content: flex-start;
+      overflow-y: auto;
+      width: 80%;
+      max-width: 500px;
+      height: 100vh;
+      box-shadow: 10px 4px 15px 0px rgba(34, 60, 80, 0.25);
+      padding: 50px 30px;
+      background-color: var(--light-color);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-150%);
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding-top: 100px;
+    }
+
+    @include small-mobile {
+      min-width: 320px;
+    }
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__logo-img {
+    width: 269px;
+    height: 55px;
+
+    @include mobile {
+      width: 206px;
+      height: 40px;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+
+  --burger-width: 40px;
+  --burger-height: 25px;
+
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+      top: 0;
+      right: -20px;
+      z-index: 1000;
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}

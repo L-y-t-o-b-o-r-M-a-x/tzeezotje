@@ -3,10 +3,28 @@
     @include flex-row;
     gap: 40px;
 
+
+    @include small-tablet {
+      &--hero {
+        gap: 38px;
+      }
+    }
+
     @include mobile {
       gap: 20px;
     }
+
+    &--hero {
+      gap: 40px;
+    }
+
+
   }
+
+  &__list--hero {
+    gap: 25px;
+  }
+
 
   &__link {
     @include flex-all-center;

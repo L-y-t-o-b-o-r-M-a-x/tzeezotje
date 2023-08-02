@@ -2,6 +2,7 @@
   &__list {
     @include flex-row;
     flex-wrap: wrap;
+    margin-left: -6px;
   }
 
   &__item:not(:last-child) {

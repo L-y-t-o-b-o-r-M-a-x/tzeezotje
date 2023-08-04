@@ -12,3 +12,4 @@ const swiper = new Swiper(el, {
     nextEl: ".news-btn--next",
   }
 });
+

@@ -15,6 +15,7 @@
   @include tablet {
     top: 15%;
   }
+
   @include mobile {
     top: 10%;
   }
@@ -24,7 +25,7 @@
     height: 46px;
     stroke-width: 2px;
     fill: var(--light-color);
-    transition: transform 0.3s ease-in-out, fill .3s ease-in-out;
+    transition: transform 0.3s ease-in-out, fill .1s ease;
 
     &:hover {
       transform: scale(1.5);
@@ -41,5 +42,25 @@
 
   &--next {
     right: 0;
+  }
+
+  &--gallery-prev {
+    top: -119px;
+    right: 103px;
+
+    @include small-tablet {
+      top: 0;
+    }
+
+
+    &--gallery-next {
+      top: -119px;
+      right: -2px;
+
+      @include small-tablet {
+        top: 0;
+      }
+
+    }
   }
 }

@@ -10,6 +10,8 @@
 @import "./components/about";
 @import "./components/services";
 @import "./components/products";
+@import "./components/gallery";
+@import "./components/contacts";
 
 // подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
@@ -17,3 +19,4 @@
 @import "./components/contacts-link";
 @import "./components/social-links";
 @import "./components/news-btn";
+@import "./components/slider-gallery";

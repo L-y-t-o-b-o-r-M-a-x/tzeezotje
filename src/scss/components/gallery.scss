@@ -1,9 +1,18 @@
 .gallery {
+  position: relative;
+  min-height: 605px;
   padding-top: 74px;
+  padding-bottom: 340px;
   background-color: var(--dark-purple);
 
   &__container {
     position: relative;
+  }
+
+  &__wrapper {
+    position: absolute;
+    // right: 25px;
+    right: 0;
   }
 
   &__title {
@@ -33,4 +42,3 @@
   }
 
 }
-

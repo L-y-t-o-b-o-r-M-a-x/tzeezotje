@@ -46,21 +46,31 @@
 
   &--gallery-prev {
     top: -119px;
-    right: 103px;
+    right: 117px;
 
     @include small-tablet {
-      top: 0;
-    }
+      top: 50%;
+      left: 0;
 
-
-    &--gallery-next {
-      top: -119px;
-      right: -2px;
-
-      @include small-tablet {
-        top: 0;
+      svg {
+        fill: var(--dark);
       }
-
     }
   }
+
+
+  &--gallery-next {
+    top: -119px;
+    right: 14px;
+
+    @include small-tablet {
+      top: 50%;
+      right: 0;
+
+      svg {
+        fill: var(--dark);
+      }
+    }
+  }
+
 }

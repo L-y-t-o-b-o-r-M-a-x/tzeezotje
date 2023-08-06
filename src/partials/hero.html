@@ -5,7 +5,44 @@
     <h1 class="hero__title">A bad day with lunch is better than a good day without it.</h1>
 
     <div class="hero__order">
-      <button class="hero__btn btn-reset" type="submit">Reserve a table</button>
+
+      <button class="hero__btn btn-reset modal-btn" data-graph-path="first" type="submit" aria-label="Reserve a table">Reserve a table</button>
+
+      <div class="graph-modal">
+        <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="first">
+          <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close a window">
+            <!-- <svg>
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg> -->
+          </button>
+          <div class="graph-modal__content">
+
+            <form class="contacts__form form-questions forms-1" action="mail.php" enctype="multipart/form-data" method="POST">
+              <input type="hidden" name="admin_email[]" value="emmanyil47@gmail.com">
+              <input type="hidden" name="form_subject" value="letter subject">
+              <h3 class="title contacts__title-form">Reserve</h3>
+              <p>
+                The manager will call you back as soon as possible and answer all your questions
+              </p>
+                <label class="form-questions__label">
+                  <span class="form-questions__caption">Name</span>
+                  <input class="form-questions__input" type="text" data-validate-field="name" name="name" required placeholder="Input your name">
+                </label>
+                <label class="form-questions__label">
+                  <span class="form-questions__caption">Email</span>
+                  <input class="form-questions__input" type="email" data-validate-field="mail" name="email" placeholder="Input your email">
+                </label>
+              <label class="form-questions__label">
+                <span class="form-questions__caption">Speciale Request</span>
+                <textarea class="form-questions__input form-questions__input--textarea" data-validate-field="message" name="message" placeholder="Input your special request"></textarea>
+              </label>
+              <button class="btn-reset form-questions__btn" type="submit">Send</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
       <div class="social-links hero__links">
         <ul class="social-links__list social-links__list--hero list-reset">
           <li class="social-links__item">

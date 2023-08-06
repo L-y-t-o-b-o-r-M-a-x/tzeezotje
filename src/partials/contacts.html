@@ -55,28 +55,26 @@
       </address>
     </div>
 
-    <form class="contacts__form form-questions" action="#" method="POST" id="contactForm">
+    <form class="contacts__form form-questions forms-1" action="mail.php" enctype="multipart/form-data" method="POST">
+      <input type="hidden" name="admin_email[]" value="emmanyil47@gmail.com">
+      <input type="hidden" name="form_subject" value="letter subject">
       <h3 class="title contacts__title-form">have any questions?</h3>
-
       <div class="form-questions__wrap">
         <label class="form-questions__label">
           <span class="form-questions__caption">Name</span>
           <input class="form-questions__input" type="text" data-validate-field="name" name="name" required placeholder="Input your name">
         </label>
-
         <label class="form-questions__label">
           <span class="form-questions__caption">Email</span>
           <input class="form-questions__input" type="email" data-validate-field="mail" name="email" placeholder="Input your email">
         </label>
       </div>
-
       <label class="form-questions__label">
         <span class="form-questions__caption">Speciale Request</span>
-        <textarea class="form-questions__input form-questions__input--textarea"data-validate-field="message" name="message" placeholder="Input your special request"></textarea>
+        <textarea class="form-questions__input form-questions__input--textarea" data-validate-field="message" name="message" placeholder="Input your special request"></textarea>
       </label>
 
       <button class="btn-reset form-questions__btn" type="submit">Send</button>
-
     </form>
   </div>
 </section>

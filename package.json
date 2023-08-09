@@ -10,10 +10,12 @@
     "cache": "gulp cache",
     "backend": "gulp backend",
     "zip": "gulp zip",
-    "code": "editorconfig-checker"
+    "code": "editorconfig-checker",
+    "deploy": "gh-pages -d app"
   },
   "author": "Max",
   "license": "ISC",
+  "homepage": " https://l-y-t-o-b-o-r-m-a-x.github.io/tzeezotje",
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",

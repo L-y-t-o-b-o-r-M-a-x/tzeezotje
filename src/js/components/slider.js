@@ -10,6 +10,6 @@ const swiper = new Swiper(el, {
   navigation: {
     prevEl: ".news-btn--prev",
     nextEl: ".news-btn--next",
-  }
+  },
 });
 

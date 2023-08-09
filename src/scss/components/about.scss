@@ -2,6 +2,11 @@
   padding-top: 80px;
   padding-bottom: 178px;
 
+  @include small-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   &__container {
     position: relative;
     display: flex;
@@ -9,7 +14,7 @@
   }
 
   &__list {
-    @include flex-column;
+    @include flex-column; //
     row-gap: 20px;
     width: 40%;
 

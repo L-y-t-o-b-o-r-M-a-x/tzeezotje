@@ -11,17 +11,14 @@
       <div class="graph-modal">
         <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="first">
           <button class="btn-reset js-modal-close graph-modal__close" aria-label="Close a window">
-            <!-- <svg>
-              <use xlink:href="img/sprite.svg#close"></use>
-            </svg> -->
           </button>
           <div class="graph-modal__content">
 
-            <form class="contacts__form form-questions forms-1" action="mail.php" enctype="multipart/form-data" method="POST">
+            <form class="graph-modal__form form-questions forms-2" action="mail.php" enctype="multipart/form-data" method="POST">
               <input type="hidden" name="admin_email[]" value="emmanyil47@gmail.com">
               <input type="hidden" name="form_subject" value="letter subject">
-              <h3 class="title contacts__title-form">Reserve</h3>
-              <p>
+              <h3 class="title graph-modal__title-form">Reserve</h3>
+              <p class="graph-modal__text descr">
                 The manager will call you back as soon as possible and answer all your questions
               </p>
                 <label class="form-questions__label">
@@ -34,7 +31,7 @@
                 </label>
               <label class="form-questions__label">
                 <span class="form-questions__caption">Speciale Request</span>
-                <textarea class="form-questions__input form-questions__input--textarea" data-validate-field="message" name="message" placeholder="Input your special request"></textarea>
+                <input class="form-questions__input" type="tel" data-validate-field="tel" name="phone" placeholder="Input your phone">
               </label>
               <button class="btn-reset form-questions__btn" type="submit">Send</button>
             </form>

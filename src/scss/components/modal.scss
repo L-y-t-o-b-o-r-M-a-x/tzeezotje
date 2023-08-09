@@ -1,44 +1,35 @@
-.modal {
-  // position: fixed;
-  // left: 0;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;z-index: 1000;
-  // overflow-y: auto;
-  // overflow-x: hidden;
-  // background-color: var(--color-modal);
-  // text-align: center;
-  // cursor: pointer;
-  // transition: .3s;
+.graph-modal {
+  &__form {
+    padding-left: 100px;
+    padding-right: 100px;
 
-  // &::before {
-  //   content: '';
-  //   display: inline-block;
-  //   height: 100%;
-  //   vertical-align: middle;
-  // }
+    @include small-tablet {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
-  &__container {
-    position: relative;
-    display: none;
-    width: 1000px;
-    margin: 50px auto;
-    border-radius: 20px;
-    vertical-align: middle;
-    text-align: left;
-    background-color: var(--light-color);
-    cursor: default;
-  }
-
-  &__close {
-    svg {
-      width: 32px;
-      height: 32px;
-      fill: var(--light-color);
+    @include mobile{
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
-  @include tablet {
-    width: 90%;
+  &__title-form {
+    @include mobile {
+      font-size: 30px;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--dark);
+
+    @include mobile {
+      text-align: center;
+    }
   }
 }

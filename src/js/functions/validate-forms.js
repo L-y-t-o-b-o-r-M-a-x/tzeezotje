@@ -16,7 +16,7 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask('+7 (999) 999-99-99');
+    const inputMask = new Inputmask('+32 (9) 999-99-99');
     inputMask.mask(telSelector);
 
     for (let item of rules) {
@@ -35,10 +35,10 @@ export const validateForms = (selector, rules, afterSend) => {
 
   const validation = new JustValidate(selector);
 
-  for (let item of rules) {
-    validation
-      .addField(item.ruleSelector, item.rules);
-  }
+  // for (let item of rules) {
+  //   validation
+  //     .addField(item.ruleSelector, item.rules);
+  // }
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);

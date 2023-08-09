@@ -76,6 +76,7 @@ const modal = new GraphModal();
 //   console.log(e.detail.dir);
 // });
 
+
 import { validateForms } from './functions/validate-forms';
 const rules1 = [
   {
@@ -103,6 +104,19 @@ const rules1 = [
     ]
   },
   {
+    ruleSelector: 'input[name="phone"]',
+    rules: [
+      {
+        rule: 'function',
+        validator: function (value) {
+          const phone = value.replace(/\D/g, '');
+          return phone.length === 10;
+        },
+        errorMessage: 'Неправильный формат номера телефона',
+      },
+    ],
+  },
+  {
     ruleSelector: 'textarea[name="message"]',
     rules: [
       {
@@ -118,4 +132,5 @@ const afterForm = () => {
   console.log('Form submitted successfully!');;
 };
 
+validateForms('.forms-2', rules1, afterForm);
 validateForms('.forms-1', rules1, afterForm);

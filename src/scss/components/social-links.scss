@@ -77,4 +77,18 @@
       }
     }
   }
+
+  &__link--footer {
+    svg:hover {
+      fill: var(--dark-purple);
+      border-radius: 50%;
+      border: 1px solid var(--light-brown);
+    }
+
+    svg:active {
+      fill: var(--dark-purple);
+      border: 1px solid var(--dark-purple);
+      border-radius: 50%;
+    }
+  }
 }

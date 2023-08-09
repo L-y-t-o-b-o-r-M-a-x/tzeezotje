@@ -3,6 +3,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 
 const elList = document.querySelector(".news-slider-gallery");
+console.log(elList);
 
 const swiperGallery = new Swiper(elList, {
   slidesPerView: "auto",

@@ -54,6 +54,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "@popperjs/core": "^2.11.2",
     "aos": "^2.3.4",
     "gh-pages": "^5.0.0",

@@ -1,6 +1,13 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  margin: auto;
+  bottom: auto;
   padding-top: 55px;
-  background-color: var(--bg-gray);
 
   @include mobile {
     padding-top: 20px;
@@ -69,19 +76,30 @@
 .burger {
   @include burger;
 
-  --burger-width: 40px;
-  --burger-height: 25px;
+  --burger-width: 45px;
+  --burger-height: 30px;
 
   display: none;
+  color: var(--light-color);
+
 
   @include tablet {
     display: block;
   }
 
   @include mobile {
-      top: 0;
-      right: -20px;
-      z-index: 1000;
+    --burger-width: 40px;
+    --burger-height: 25px;
+
+    top: 0;
+    right: -20px;
+    z-index: 1000;
+  }
+}
+
+@include mobile {
+  .burger.burger--active {
+    color: var(--dark);
   }
 }
 

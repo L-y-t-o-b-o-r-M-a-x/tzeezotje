@@ -3,10 +3,28 @@
     @include flex-row;
     gap: 40px;
 
+
+    @include small-tablet {
+      &--hero {
+        gap: 38px;
+      }
+    }
+
     @include mobile {
       gap: 20px;
     }
+
+    &--hero {
+      gap: 40px;
+    }
+
+
   }
+
+  &__list--hero {
+    gap: 25px;
+  }
+
 
   &__link {
     @include flex-all-center;
@@ -57,6 +75,20 @@
         border: 1px solid var(--dark-purple);
         border-radius: 50%;
       }
+    }
+  }
+
+  &__link--footer {
+    svg:hover {
+      fill: var(--dark-purple);
+      border-radius: 50%;
+      border: 1px solid var(--light-brown);
+    }
+
+    svg:active {
+      fill: var(--dark-purple);
+      border: 1px solid var(--dark-purple);
+      border-radius: 50%;
     }
   }
 }

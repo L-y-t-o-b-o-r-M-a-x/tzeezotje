@@ -30,8 +30,8 @@ import { burger } from './functions/burger';
 // import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -76,11 +76,61 @@ import { burger } from './functions/burger';
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+import { validateForms } from './functions/validate-forms';
+const rules1 = [
+  {
+    ruleSelector: '.form-questions__input',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Please fill in your name!'
+      }
+    ]
+  },
+  {
+    ruleSelector: 'input[type="email"]',
+    rules: [
+      {
+        rule: 'email',
+        value: true,
+        errorMessage: 'Please enter a valid email address!'
+      }
+    ]
+  },
+  {
+    ruleSelector: 'input[name="phone"]',
+    rules: [
+      {
+        rule: 'function',
+        validator: function (value) {
+          const phone = value.replace(/\D/g, '');
+          return phone.length === 10;
+        },
+        errorMessage: 'Неправильный формат номера телефона',
+      },
+    ],
+  },
+  {
+    ruleSelector: 'textarea[name="message"]',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Please enter your special request!'
+      }
+    ]
+  },
+];
 
-// validateForms('.form-1', rules1, afterForm);
+const afterForm = () => {
+  console.log('Form submitted successfully!');;
+};
+
+validateForms('.forms-2', rules1, afterForm);
+validateForms('.forms-1', rules1, afterForm);

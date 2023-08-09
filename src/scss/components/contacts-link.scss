@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  flex-shrink: 0;
   gap: 11px;
 
   svg {
@@ -25,6 +26,10 @@
     line-height: 24px;
     color: var(--light-color);
     transition: color 0.3s ease, transform 0.3s ease;
+
+    @include tablet {
+      color: var(--dark);
+    }
   }
 
   &__value:focus {
@@ -39,9 +44,4 @@
   &__value:active {
     color: var(--dark-purple);
   }
-
-  // @include tablet {
-  //     color: var(--dark);
-
-  // }
 }

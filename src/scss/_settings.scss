@@ -112,3 +112,19 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.section-title {
+  margin: 0;
+}
+
+.descr {
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 88px;
+  color: var(--dark);
+}
